@@ -157,7 +157,11 @@ macro_rules! unit_rejection {
     };
 }
 
-unit_rejection!(InvalidQuery, "Invalid query string", http::StatusCode::BAD_REQUEST);
+unit_rejection!(
+    InvalidQuery,
+    "Invalid query string",
+    http::StatusCode::BAD_REQUEST
+);
 unit_rejection!(
     MethodNotAllowed,
     "Method not allowed",
